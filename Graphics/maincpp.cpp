@@ -37,6 +37,7 @@ float lastFrame = 0.0f;
 
 //lighting
 glm::vec3 lightPos(15.0f, 20.0f, 1.0f);
+
 //glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 //glm::vec3 lightPos(-1.2f, 1.0f, 2.0f);
 
@@ -288,7 +289,7 @@ int main()
 
     // load models
     // -----------
-    Model HouseModel("objects/house/house3.obj");
+    Model HouseModel("objects/house/old_house.obj");
 
     //Model tree1("objects/tree/tree.obj");
 
