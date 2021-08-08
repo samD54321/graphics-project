@@ -26,7 +26,7 @@ const unsigned int SCR_WIDTH = 3840;
 const unsigned int SCR_HEIGHT = 2400;
 
 // camera
-Camera camera(glm::vec3(0.0f, 1.0f, 10.0f));
+Camera camera(glm::vec3(10.0f, 10.0f, 10.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -36,9 +36,22 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
 //lighting
-glm::vec3 lightPos(15.0f, 20.0f, 1.0f);
-//glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
-//glm::vec3 lightPos(-1.2f, 1.0f, 2.0f);
+//lighting
+glm::vec3 positions[] = {
+    glm::vec3(5.0f, 5.0f, 1.0f),
+    glm::vec3(2.0f, 2.0f, 1.0f),
+    glm::vec3(-2.0f, 2.0f, -1.0f),
+    glm::vec3(-2.0f, 2.0f, 1.0f),
+    glm::vec3(2.0f, 2.0f, -1.0f),
+};
+glm::vec3 ambients[] = {
+    glm::vec3(0.3f, 0.3f,0.3f),
+    glm::vec3(0.2f, 0.2f, 0.2f),
+    glm::vec3(0.2f, 0.2f, 0.2f),
+    glm::vec3(0.2f, 0.2f, 0.2f),
+    glm::vec3(0.2f, 0.2f, 0.2f),
+};
+
 
 int main()
 {
@@ -303,6 +316,33 @@ int main()
     lightingShader.setInt("material.diffuse", 0);
     lightingShader.setInt("material.specular", 1);
 
+
+    void LightFunction(Shader & lightingShader)
+    {
+        lightingShader.use();
+        lightingShader.setInt("material.diffuse", 0);
+        lightingShader.setInt("material.specular", 1);
+    }
+
+    void SetIntensity(Shader& lightingShader, glm::vec3 lightPos, glm::vec3 lightambient)
+    {
+        lightingShader.use();
+        lightingShader.setVec3("light.position", lightPos);
+
+        lightingShader.setVec3("viewPos", camera.Position);
+
+        // light properties
+        lightingShader.setVec3("light.ambient", lightambient);
+        lightingShader.setVec3("light.diffuse", 0.8f, 0.8f, 0.8f);
+        lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+        lightingShader.setFloat("light.constant", 0.01f);
+        lightingShader.setFloat("light.linear", 0.002f);
+        lightingShader.setFloat("light.quadratic", 0.0013f);
+
+        // material properties
+        lightingShader.setFloat("material.shininess", 32.0f);
+
+    }
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
