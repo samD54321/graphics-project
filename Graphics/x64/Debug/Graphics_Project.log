@@ -1,13 +1,21 @@
 ﻿  maincpp.cpp
-C:\Users\shawn\Documents\graphics-project\Graphics\Shader.h(56,40): warning C4101: 'e': unreferenced local variable
-C:\Users\shawn\Documents\graphics-project\Graphics\Mesh.h(84,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(312,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(447,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(448,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(452,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(453,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(455,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(456,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\shawn\Documents\graphics-project\Graphics\maincpp.cpp(465,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\Shader.h(56,40): warning C4101: 'e': unreferenced local variable
+C:\Users\shawn\Documents\graphics-main\Mesh.h(84,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(453,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(513,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(514,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(521,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(522,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(529,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(530,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(537,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(538,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(674,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(675,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(679,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(680,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(682,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(683,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\shawn\Documents\graphics-main\maincpp.cpp(692,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Graphics_Project.vcxproj -> C:\Users\shawn\Documents\graphics-project\Graphics\x64\Debug\Graphics_Project.exe
+  Graphics_Project.vcxproj -> C:\Users\shawn\Documents\graphics-main\x64\Debug\Graphics_Project.exe

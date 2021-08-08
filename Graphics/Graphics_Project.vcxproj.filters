@@ -76,10 +76,10 @@
     <Text Include="lightCubeFS.txt">
       <Filter>Resource Files\shaders</Filter>
     </Text>
-    <Text Include="lightVS.txt">
+    <Text Include="light.VS">
       <Filter>Resource Files\shaders</Filter>
     </Text>
-    <Text Include="lightFS.txt">
+    <Text Include="light.FS">
       <Filter>Resource Files\shaders</Filter>
     </Text>
   </ItemGroup>
