@@ -227,6 +227,7 @@ int main()
     // -------------------------
     //Shader ourShader("modelVS.txt", "modelFS.txt");
     Shader skyboxShader("skyboxVS.txt", "skyboxFS.txt");
+ 
 
     //cubeMap
     float skyboxVertices[] = {
@@ -286,17 +287,29 @@ int main()
 
     vector<std::string> faces
     {
-        "skybox/right.jpg",
-        "skybox/left.jpg",
-        "skybox/top.jpg",
-        "skybox/bottom.jpg",
-        "skybox/front.jpg",
-        "skybox/back.jpg"
+        "skybox/day/right.jpg",
+        "skybox/day/left.jpg",
+        "skybox/day/top.jpg",
+        "skybox/day/bottom.jpg",
+        "skybox/day/front.jpg",
+        "skybox/day/back.jpg"
+    };
+    vector<std::string> night_faces
+    {
+        "skybox/night/right.jpg",
+        "skybox/night/left.jpg",
+        "skybox/night/top.jpg",
+        "skybox/night/bottom.jpg",
+        "skybox/night/front.jpg",
+        "skybox/night/back.jpg"
     };
     unsigned int cubemapTexture = loadCubemap(faces);
+    unsigned int night_cubemapTexture = loadCubemap(night_faces);
 
     skyboxShader.use();
     skyboxShader.setInt("skybox", 0);
+
+  
 
 
 
@@ -616,13 +629,19 @@ int main()
         // draw skybox as last
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
         skyboxShader.use();
+
         view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix
         skyboxShader.setMat4("view", view);
         skyboxShader.setMat4("projection", projection);
         // skybox cube
         glBindVertexArray(skyboxVAO);
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+        if (isNightMode == 0) {
+            glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+        }
+        else {
+            glBindTexture(GL_TEXTURE_CUBE_MAP, night_cubemapTexture);
+        }
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
         glDepthFunc(GL_LESS); // set depth function back to default
