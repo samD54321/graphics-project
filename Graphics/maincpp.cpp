@@ -496,9 +496,6 @@ int main()
         if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
             
                 isNightMode = 1;
-                lightingShader.setVec3("dirLight.ambient", 0.0f, 0.0f, 0.0f);
-                lightingShader.setVec3("dirLight.diffuse", 0.0f, 0.0f, 0.0f);
-                lightingShader.setVec3("dirLight.specular", 0.0f, 0.0f, 0.0f);
            
             lightingShader.setInt("dir", isNightMode);
         }
@@ -506,10 +503,6 @@ int main()
         if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
             
                 isNightMode = 0;
-                lightingShader.setVec3("dirLight.direction", 0.8f, 0.8f, 0.8f);
-                lightingShader.setVec3("dirLight.ambient", 0.8f, 0.8f, 0.8f);
-                lightingShader.setVec3("dirLight.diffuse", 0.6f, 0.6f, 0.6f);
-                lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
             lightingShader.setInt("dir", isNightMode);
         }
