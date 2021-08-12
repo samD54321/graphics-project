@@ -6,3 +6,4 @@ D:\5th sem\graphics\graphics\GLCoders\x64\Debug\Graphics_Project.exe
 D:\5th sem\graphics\graphicsproject\graphics\x64\Debug\Graphics_Project.exe
 C:\Users\shawn\Documents\graphics-main\x64\Debug\Graphics_Project.exe
 C:\Users\shawn\Documents\graphics-project\Graphics\x64\Debug\Graphics_Project.exe
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\x64\Debug\Graphics_Project.exe

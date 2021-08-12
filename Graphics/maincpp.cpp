@@ -52,10 +52,10 @@ glm::vec3 dirlightpos(5.0f, -1.0f, 4.0f);
 
 // positions of the point lights
 glm::vec3 pointLightPositions[] = {
-    glm::vec3(0.0f, 0.0f, 1.0f),
-    glm::vec3(-7.0f, 1.0f, 4.0f),
-    glm::vec3(7.0f, 1.0f, -4.0f),
-    glm::vec3(-7.0f, 1.0f, -4.0f),
+    glm::vec3(0.026668f, -0.999697f, 2.433918f),
+    glm::vec3(-2.290428f, -1.027540f, 0.063691f),
+    glm::vec3(-0.004190f, -1.030918f, -2.235628f),
+    glm::vec3(2.333991f, -1.034376f, 0.060217f),
 };
 
 
@@ -461,6 +461,7 @@ int main()
     // -----------
     while (!glfwWindowShouldClose(window))
     {
+        std::cout << glm::to_string(camera.Position) << std::endl;
         // per-frame time logic
         // --------------------
         float currentFrame = glfwGetTime();
