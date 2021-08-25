@@ -2,20 +2,19 @@
 C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\Shader.h(56,40): warning C4101: 'e': unreferenced local variable
 C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\Mesh.h(84,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
 C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(467,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(520,62): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(521,66): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(528,62): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(529,66): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(536,62): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(537,66): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(544,62): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(545,66): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(687,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(688,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(692,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(693,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(695,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(696,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(705,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(526,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(527,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(534,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(535,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(542,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(543,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(550,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(551,66): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(693,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(694,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(698,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(699,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(701,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(702,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\maincpp.cpp(711,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Graphics_Project.vcxproj -> C:\Users\Sampanna\Documents\GitHub\graphics-project\Graphics\x64\Debug\Graphics_Project.exe

@@ -461,12 +461,18 @@ int main()
     // -----------
     while (!glfwWindowShouldClose(window))
     {
-        std::cout << glm::to_string(camera.Position) << std::endl;
+        
         // per-frame time logic
         // --------------------
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
+
+        /*glm::vec3(0.026668f, -0.999697f, 2.433918f),
+            glm::vec3(-2.290428f, -1.027540f, 0.063691f),
+            glm::vec3(-0.004190f, -1.030918f, -2.235628f),
+            glm::vec3(2.333991f, -1.034376f, 0.060217f),
+          */  
 
         // input
         // -----
