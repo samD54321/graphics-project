@@ -104,7 +104,7 @@ glm::mat4 mat_scale(glm::mat4 mat1, glm::vec3 vec1)
 glm::mat4 mat_rotate(glm::mat4 mat1, float angle, glm::vec3 vec1)
 {
     const float theta = angle; //glm::radians(angle) if input is in degree
-    const float cos_theta = cos(angle);
+    const float cos_theta = cos(theta);
     const float sin_theta = sin(theta);
 
     glm::vec3 axis = normalize(vec1);  // vec1/sqrt(vec1[0]*vec1[0] + vec1[1]*vec1[1] + vec1[2]*vec1[2])
@@ -362,7 +362,7 @@ int main()
     // load image, create texture and generate mipmaps
     int width, height, nrChannels;
     // The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
-    unsigned char* data = stbi_load("textures/bottom.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load("textures/stone.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -556,8 +556,8 @@ int main()
         // view/projection transformations
         //glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-
         glm::mat4 view = camera.GetViewMatrix();
+
         lightingShader.setMat4("projection", projection);
         lightingShader.setMat4("view", view);
 
