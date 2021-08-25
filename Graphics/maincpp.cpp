@@ -61,26 +61,27 @@ glm::vec3 pointLightPositions[] = {
 
 
 //prespective
-glm::mat4 myperspective(float angleInRadians, float aspectRatio, float zNear, float zFar)
+glm::mat4 myperspective(float fov, float aspectRatio, float zNear, float zFar)
 {
-    float matarray[16] = { 0 }; //4*4 matrix array
-    matarray[0] = 1 / (aspectRatio * tan(angleInRadians / 2.0f));
-    matarray[5] = 1 / tan(angleInRadians / 2.0f);
-    matarray[11] = 1.0f;
+    glm::mat4 projection;
 
-    if (GLM_DEPTH_CLIP_SPACE == GLM_DEPTH_ZERO_TO_ONE)
-    {
-        matarray[10] = -zFar / (zFar - zNear);
-        matarray[14] = -(zFar * zNear) / (zFar - zNear);
+    float scale = 1.0 / tan(fov/2);
+    projection[0][0] = scale/aspectRatio; 
+    projection[1][1] = scale; // scale the y coordinates
+ 
+    projection[2][3] = -1;
+    //projection[2][2] = -(zFar + zNear) / (zFar - zNear);   // remap z to [0,1] 
+    //projection[3][2] = (2*zFar*zNear) / (zNear - zFar);
+    
+    if (GLM_DEPTH_CLIP_SPACE == GLM_DEPTH_ZERO_TO_ONE) {
+        projection[2][2] = zFar / (zNear - zFar);
+        projection[3][2] = -(zFar * zNear) / (zFar - zNear);
     }
-    else
-    {
-        matarray[10] = -(zFar + zNear) / (zFar - zNear);
-        matarray[14] = -(2.0f * zFar * zNear) / (zFar - zNear);
+    else {
+        projection[2][2] = -(zFar + zNear) / (zFar - zNear);
+        projection[3][2] = -(2 * zFar * zNear) / (zFar - zNear);
     }
-
-    glm::mat4 projection = glm::make_mat4(matarray);
-    //std::cout << glm::to_string(projection);
+    std::cout<<"myperspective"<<std::endl;
     return projection;
 }
 //scale
@@ -523,32 +524,32 @@ int main()
         lightingShader.setVec3("pointLights[0].diffuse", 0.8f, 0.8f, 0.8f);
         lightingShader.setVec3("pointLights[0].specular", 1.0f, 1.0f, 1.0f);
         lightingShader.setFloat("pointLights[0].constant", 1.0f);
-        lightingShader.setFloat("pointLights[0].linear", 0.09);
-        lightingShader.setFloat("pointLights[0].quadratic", 0.032);
+        lightingShader.setFloat("pointLights[0].linear", 0.35);
+        lightingShader.setFloat("pointLights[0].quadratic", 0.44);
         // point light 2
         lightingShader.setVec3("pointLights[1].position", pointLightPositions[1]);
         lightingShader.setVec3("pointLights[1].ambient", 0.01f, 0.01f, 0.01f);
         lightingShader.setVec3("pointLights[1].diffuse", 0.8f, 0.8f, 0.8f);
         lightingShader.setVec3("pointLights[1].specular", 1.0f, 1.0f, 1.0f);
         lightingShader.setFloat("pointLights[1].constant", 1.0f);
-        lightingShader.setFloat("pointLights[1].linear", 0.09);
-        lightingShader.setFloat("pointLights[1].quadratic", 0.032);
+        lightingShader.setFloat("pointLights[1].linear", 0.35);
+        lightingShader.setFloat("pointLights[1].quadratic", 0.44);
         // point light 3
         lightingShader.setVec3("pointLights[2].position", pointLightPositions[2]);
         lightingShader.setVec3("pointLights[2].ambient", 0.01f, 0.01f, 0.01f);
         lightingShader.setVec3("pointLights[2].diffuse", 0.8f, 0.8f, 0.8f);
         lightingShader.setVec3("pointLights[2].specular", 1.0f, 1.0f, 1.0f);
         lightingShader.setFloat("pointLights[2].constant", 1.0f);
-        lightingShader.setFloat("pointLights[2].linear", 0.09);
-        lightingShader.setFloat("pointLights[2].quadratic", 0.032);
+        lightingShader.setFloat("pointLights[2].linear", 0.35);
+        lightingShader.setFloat("pointLights[2].quadratic", 0.44);
         // point light 4
         lightingShader.setVec3("pointLights[3].position", pointLightPositions[3]);
         lightingShader.setVec3("pointLights[3].ambient", 0.01f, 0.01f, 0.01f);
         lightingShader.setVec3("pointLights[3].diffuse", 0.8f, 0.8f, 0.8f);
         lightingShader.setVec3("pointLights[3].specular", 1.0f, 1.0f, 1.0f);
         lightingShader.setFloat("pointLights[3].constant", 1.0f);
-        lightingShader.setFloat("pointLights[3].linear", 0.09);
-        lightingShader.setFloat("pointLights[3].quadratic", 0.032);
+        lightingShader.setFloat("pointLights[3].linear", 0.35);
+        lightingShader.setFloat("pointLights[3].quadratic", 0.44);
 
 
 
